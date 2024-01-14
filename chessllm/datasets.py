@@ -28,36 +28,28 @@ def download_file(url):
 
 
 def parse_and_store_games(file_path):
-    total_lines = sum(1 for _ in open(file_path, "r"))
-    games_data = []
-    current_game = []
-    elo_regex = re.compile(r"\[WhiteElo \"(\d+)\"\]|\[BlackElo \"(\d+)\"\]")
+    filtered_lines = []
 
-    with open(file_path, "r") as file:
-        progress_bar = tqdm(total=total_lines, desc="Parsing Games")
+    # Open the file and read line by line
+    with open(file_path, 'r') as file:
         for line in file:
-            stripped_line = line.strip()
-            current_game.append(stripped_line)
-            if stripped_line == "":
-                game_content = "\n".join(current_game)
-                elos = elo_regex.findall(game_content)
+            if line.startswith('[WhiteElo') or line.startswith('[BlackElo') or line.strip().startswith('1.'):
+                filtered_lines.append(line.strip())
 
-                white_elo, black_elo = 0, 0
-                if elos:
-                    for elo_pair in elos:
-                        white_elo = int(elo_pair[0]) if elo_pair[0] else white_elo
-                        black_elo = int(elo_pair[1]) if elo_pair[1] else black_elo
+    games_data = []
+    for i in range(0, len(filtered_lines) - 2, 3):
+        try:
+            white_elo = int(filtered_lines[i].split('"')[1])
+            black_elo = int(filtered_lines[i + 1].split('"')[1])
+            average_elo = (white_elo + black_elo) / 2
+        except (ValueError, IndexError):
+            # Skip the game if there's an issue with Elo ratings or index
+            continue
 
-                if white_elo and black_elo:
-                    avg_elo = (white_elo + black_elo) / 2
-                    games_data.append((avg_elo, game_content))
+        transcript = filtered_lines[i + 2]
+        games_data.append({'average_elo': average_elo, 'transcript': transcript})
 
-                current_game = []
-
-            progress_bar.update(1)
-        progress_bar.close()
-
-    return pd.DataFrame(games_data, columns=["average_elo", "transcript"])
+    return pd.DataFrame(games_data)
 
 
 def decompress_file(compressed_file):

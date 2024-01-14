@@ -4,6 +4,25 @@
   <p><em>Train your chess LLM and compete in the arena.</em></p>
 </div>
 
+<style>
+  table {
+    width: 100%;
+    margin: auto;
+    border-collapse: collapse;
+  }
+
+    th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+
+  tr:first-child th {
+    background-color: #ddd; /* Light gray background for the first row */
+  }
+
+</style>
+
 | Notebook          | Description                                    | Notebook                                                                                                                                          |
 | ----------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Chess LLM Dataset | Create your own dataset based on Lichess data. | <a href="https://colab.research.google.com/drive/1ZVJLBUYlyN24aQtoFY7U8U5KeJY_Ml-Z?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |

@@ -8,3 +8,4 @@ tqdm
 cairosvg
 gistyc
 wandb
+outlines

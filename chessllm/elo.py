@@ -43,6 +43,13 @@ def update_elo_ratings(chess_data):
     return elo_ratings
 
 
+def result_to_float(x: str):
+    if x == "1/2":
+        return 0.5
+    else:
+        return float(x)
+
+
 def print_elo_ratings(
     model_id_white: str, model_id_black: str, elo_ratings_df, result: str
 ):
@@ -66,7 +73,7 @@ def print_elo_ratings(
         elo_ratings_df["Model"] == model_id_black, "ELO Rating"
     ].get(0, 1000)
 
-    result = [float(x) for x in result.split("-")]
+    result = [result_to_float(x) for x in result.split("-")]
     new_elo_white = calculate_elo(elo_white, elo_black, result[0])
     new_elo_black = calculate_elo(elo_black, elo_white, result[1])
 

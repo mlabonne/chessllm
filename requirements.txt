@@ -1,0 +1,10 @@
+python-chess
+transformers 
+accelerate 
+datasets 
+zstandard 
+huggingface-hub
+tqdm 
+cairosvg
+gistyc
+wandb

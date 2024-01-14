@@ -3,7 +3,7 @@ Utility functions for processing data from adamkarvonen/chess_games before train
 """
 
 
-def combine_columns_map(example):
+def filter_transcript(example):
     """ """
     transcript = "1." + example["transcript"].split("1.", 1)[-1]
     return {"transcript": transcript}

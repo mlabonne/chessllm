@@ -1,3 +1,4 @@
 jupyterlab 
+ipywidgets
 isort 
 ruff

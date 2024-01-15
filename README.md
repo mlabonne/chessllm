@@ -7,10 +7,10 @@
   <p><em>Train your own chess LLM and compete in the arena!</em></p>
 </div>
 
-| Notebook          | Description                                    | Notebook                                                                                                                                          |
-| ----------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Chess LLM Dataset | Create your own dataset based on Lichess data. | <a href="https://colab.research.google.com/drive/11UjbfajCzphe707_V7PD-2e5WIzyintf?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| Chess LLM Trainer | Train your chess LLMs with this notebook.      | <a href="https://colab.research.google.com/drive/1e2PszrvaY4Lv5SiRXuBGb5R4GdZsm-H3?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
+| Notebook          | Description                                                       | Notebook                                                                                                                                          |
+| ----------------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Chess LLM Dataset | Create your own PGN dataset based on Lichess data and ELO scores. | <a href="https://colab.research.google.com/drive/11UjbfajCzphe707_V7PD-2e5WIzyintf?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
+| Chess LLM Trainer | Train your own chess small language models on your datasets.      | <a href="https://colab.research.google.com/drive/1e2PszrvaY4Lv5SiRXuBGb5R4GdZsm-H3?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
 
 # Installation
 

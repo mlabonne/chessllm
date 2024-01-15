@@ -1,14 +1,16 @@
 <div align="center">
   <h1>♟️ Chess LLM</h1>
-  <p>🏆 <a href="https://gist.github.com/chessllm/696115fe2df47fb2350fcff2663678c9">Leaderboard</a></p>
-  <p><em>Train your chess LLM and compete in the arena.</em></p>
+  <p>
+    ⚔️ <a href="https://huggingface.co/spaces/mlabonne/chessllm">Chess LLM Arena</a> •
+    🏆 <a href="https://gist.github.com/chessllm/696115fe2df47fb2350fcff2663678c9">Leaderboard</a>
+  </p>
+  <p><em>Train your own chess LLM and compete in the arena!</em></p>
 </div>
 
 | Notebook          | Description                                    | Notebook                                                                                                                                          |
 | ----------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Chess LLM Dataset | Create your own dataset based on Lichess data. | <a href="https://colab.research.google.com/drive/1ZVJLBUYlyN24aQtoFY7U8U5KeJY_Ml-Z?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| Chess LLM Trainer | Train your chess LLMs with this notebook.      | <a href="https://colab.research.google.com/drive/1bHftO1h9lX9jFSnHJCKjycEeCY5khO5L?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| Chess LLM Arena   | Watch two chess LLMs play against each other.  | <a href="https://colab.research.google.com/drive/16ZELw3wWQ43aUFBH6f7GUhCm8HwPyhlY?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
+| Chess LLM Dataset | Create your own dataset based on Lichess data. | <a href="https://colab.research.google.com/drive/11UjbfajCzphe707_V7PD-2e5WIzyintf?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
+| Chess LLM Trainer | Train your chess LLMs with this notebook.      | <a href="https://colab.research.google.com/drive/1e2PszrvaY4Lv5SiRXuBGb5R4GdZsm-H3?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
 
 # Installation
 

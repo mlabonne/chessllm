@@ -1,7 +1,8 @@
 import io
 import re
 from datetime import datetime
-
+# import os
+# os.add_dll_directory(r"C:\Program Files\GTK3-Runtime Win64\bin") Uncomment this line if running on windows and GTK3 is installed
 import cairosvg
 import chess
 import gistyc

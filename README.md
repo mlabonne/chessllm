@@ -16,6 +16,10 @@
 
 To install the utility package, run the following command in the root directory of the repository:
 
+# Windows OS
+- Install GTK3 Runtime 
+- Add the bin path to chess_utils.py under os.add_dll_directory
+
 ```bash
 pip install -e . 
 ```

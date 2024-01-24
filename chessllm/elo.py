@@ -1,5 +1,5 @@
 from collections import defaultdict
-
+import pandas as pd
 
 def calculate_elo(rank1, rank2, result):
     """
@@ -25,18 +25,19 @@ def update_elo_ratings(chess_data):
     elo_ratings = defaultdict(lambda: 1000)  # Default ELO rating is 1000
 
     for index, row in chess_data.iterrows():
-        if row["Result"] == "*":
+        if row["Result"] == "*" or pd.isnull(row["Result"]):
             continue  # Skip ongoing games
 
         model1 = row["Model1"]
         model2 = row["Model2"]
         result = row["Result"]
-
+        
         model1_elo = elo_ratings[model1]
         model2_elo = elo_ratings[model2]
 
-        result = [float(x) for x in result.split("-")]
+        result = [result_to_float(x) for x in result.split("-")]
         # update ELO based on the result of the game
+        print(result)
         elo_ratings[model1] = calculate_elo(model1_elo, model2_elo, result[0])
         elo_ratings[model2] = calculate_elo(model2_elo, model1_elo, result[1])
 

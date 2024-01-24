@@ -19,3 +19,12 @@ To install the utility package, run the following command in the root directory 
 ```bash
 pip install -e . 
 ```
+
+# Windows OS
+- Install GTK3 Runtime 
+- Add the bin path to chess_utils.py under os.add_dll_directory
+
+
+# Install Stockfish
+- Download Stockfish from https://stockfishchess.org/download/
+- Place the stockfish-windows-x86-64-avx2 under stockfish folder in main project
